@@ -1,0 +1,80 @@
+{%load static%}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body> 
+    <form align="center" action="." method="get" style="margin-bottom: 1%;">
+        {% csrf_token %}
+        물건 검색 : 
+        <input type="text" name="message">
+        <input type="submit" value="검색">
+    </form>
+    <div align="center">
+        {{many}}
+        {{검색어0}}{{oj0}}{{None0}}
+        {{검색어DAJL}}{{ojDAJL}}
+        {{검색어DAJR}}{{ojDAJR}}
+        <br>       
+        {{DAJL전체}}{{resultDAJL}}
+        {{DAJR전체}}{{resultDAJR}}
+    </div>
+    <div align="center" style="margin-top: 1%;">
+        전체 품목 보기 : 
+        <form action="." method="get" style="display: inline-block; margin-bottom:1%;" id="inf">
+            {% csrf_token %}
+            <select name="info" form="inf">
+                <option value="">선택하세요</option>
+                <option value="DAJL">왼쪽문</option>
+                <option value="DAJR">오른쪽문</option>
+                
+            </select>
+            <input type="submit" value="보기">
+        </form>
+    </div>
+    <div align="center">
+        {{DAJL1}}{{DAJLall}}
+        {{DAJR1}}{{DAJRall}}
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="새로고침" onclick="location.href='.'">
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="동아장문 찾기" onclick="location.href='/searchoj/dajoj/'">
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="홈으로" onclick="location.href='/'">
+    </div>
+    <h3 align="center">&#60;동아장&#62;</h3>
+    <table align="center" border="1" width="30%" style="border-collapse: collapse;">
+        <tr>
+            <td align="center" width="50%">왼쪽문{{DAJL}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/DAJL/'"></td>
+            <td align="center" width="50%">오른쪽문{{DAJR}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/DAJR/'"></td>
+        </tr>
+    </table>
+    <h3 align="center">&#60;동아장 오른쪽&#62;</h3>
+    <table align="center" border="1" width="30%" style="border-collapse: collapse;" >
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>    
+    </table>
+</body>
+</html>

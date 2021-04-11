@@ -1,0 +1,188 @@
+{%load static%}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body> 
+    <form align="center" action="." method="get" style="margin-bottom: 1%;">
+        {% csrf_token %}
+        물건 검색 : 
+        <input type="text" name="message">
+        <input type="submit" value="검색">
+    </form>
+    <div align="center">
+        {{many}}
+        {{검색어0}}{{oj0}}{{None0}}
+        {{검색어A0}}{{ojA0}}
+        {{검색어A1}}{{ojA1}}
+        {{검색어B0}}{{ojB0}}
+        {{검색어B1}}{{ojB1}}
+        {{검색어C0}}{{ojC0}}
+        {{검색어C1}}{{ojC1}}
+        {{검색어D0}}{{ojD0}}
+        {{검색어D1}}{{ojD1}}
+        {{검색어E0}}{{ojE0}}
+        {{검색어E1}}{{ojE1}}
+        {{검색어F0}}{{ojF0}}
+        {{검색어F1}}{{ojF1}}
+        {{검색어G0}}{{ojG0}}
+        {{검색어G1}}{{ojG1}}
+        {{검색어H0}}{{ojH0}}
+        {{검색어H1}}{{ojH1}}
+        {{검색어H2}}{{ojH2}}
+        {{검색어H3}}{{ojH3}}
+        {{검색어I0}}{{ojI0}}
+        {{검색어I1}}{{ojI1}}
+        {{검색어J0}}{{ojJ0}}
+        {{검색어J1}}{{ojJ1}}
+        {{검색어K0}}{{ojK0}}
+        {{검색어K1}}{{ojK1}}
+        {{검색어L0}}{{ojL0}}
+        {{검색어L1}}{{ojL1}}
+        {{검색어M0}}{{ojM0}}
+        {{검색어M1}}{{ojM1}}
+        {{검색어N0}}{{ojN0}}
+        {{검색어O0}}{{ojO0}}
+        {{검색어P0}}{{ojP0}}
+        <br>       
+        {{A0전체}}{{resultA0}}
+        {{A1전체}}{{resultA1}}
+        {{B0전체}}{{resultB0}}
+        {{B1전체}}{{resultB1}}
+        {{C0전체}}{{resultC0}}
+        {{C1전체}}{{resultC1}}
+        {{D0전체}}{{resultD0}}
+        {{D1전체}}{{resultD1}}
+        {{E0전체}}{{resultE0}}
+        {{E1전체}}{{resultE1}}
+        {{F0전체}}{{resultF0}}
+        {{F1전체}}{{resultF1}}
+        {{G0전체}}{{resultG0}}
+        {{G1전체}}{{resultG1}}
+        {{H0전체}}{{resultH0}}
+        {{H1전체}}{{resultH1}}
+        {{H2전체}}{{resultH2}}
+        {{H3전체}}{{resultH3}}
+        {{I0전체}}{{resultI0}}
+        {{I1전체}}{{resultI1}}
+        {{J0전체}}{{resultJ0}}
+        {{J1전체}}{{resultJ1}}
+        {{K0전체}}{{resultK0}}
+        {{K1전체}}{{resultK1}}
+        {{L0전체}}{{resultL0}}
+        {{L1전체}}{{resultL1}}
+        {{M0전체}}{{resultM0}}
+        {{M1전체}}{{resultM1}}
+        {{N0전체}}{{resultN0}}
+        {{O0전체}}{{resultO0}}
+        {{P0전체}}{{resultP0}}
+    </div>
+    <div align="center" style="margin-top: 1%;">
+        전체 품목 보기 : 
+        <form action="." method="get" style="display: inline-block; margin-bottom:1%;" id="inf">
+            {% csrf_token %}
+            <select name="info" form="inf">
+                <option value="">선택하세요</option>
+                <option value="A0">A0</option>
+                <option value="A1">A1</option>
+                <option value="B0">B0</option>
+                <option value="B1">B1</option>
+                <option value="C0">C0</option>
+                <option value="C1">C1</option>
+                <option value="D0">D0</option>
+                <option value="D1">D1</option>
+                <option value="E0">E0</option>
+                <option value="E1">E1</option>
+                <option value="F0">F0</option>
+                <option value="F1">F1</option>
+                <option value="G0">G0</option>
+                <option value="G1">G1</option>
+                <option value="H0">H0</option>
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="I0">I0</option>
+                <option value="I1">I1</option>
+                <option value="J0">J0</option>
+                <option value="J1">J1</option>
+                <option value="K0">K0</option>
+                <option value="K1">K1</option>
+                <option value="L0">L0</option>
+                <option value="L1">L1</option>
+                <option value="M0">M0</option>
+                <option value="M1">M1</option>
+                <option value="N0">N0</option>
+                <option value="O0">O0</option>
+                <option value="P0">P0</option>
+                
+            </select>
+            <input type="submit" value="보기">
+        </form>
+    </div>
+    <div align="center">
+        {{진성A0}}{{A0all}}
+        {{진성A1}}{{A1all}}
+        {{진성B0}}{{B0all}}
+        {{진성B1}}{{B1all}}
+        {{진성C0}}{{C0all}}
+        {{진성C1}}{{C1all}}
+        {{진성D0}}{{D0all}}
+        {{진성D1}}{{D1all}}
+        {{진성E0}}{{E0all}}
+        {{진성E1}}{{E1all}}
+        {{진성F0}}{{F0all}}
+        {{진성F1}}{{F1all}}
+        {{진성G0}}{{G0all}}
+        {{진성G1}}{{G1all}}
+        {{진성H0}}{{H0all}}
+        {{진성H1}}{{H1all}}
+        {{진성H2}}{{H2all}}
+        {{진성H3}}{{H3all}}
+        {{진성I0}}{{I0all}}
+        {{진성I1}}{{I1all}}
+        {{진성J0}}{{J0all}}
+        {{진성J1}}{{J1all}}
+        {{진성K0}}{{K0all}}
+        {{진성K1}}{{K1all}}
+        {{진성L0}}{{L0all}}
+        {{진성L1}}{{L1all}}
+        {{진성M0}}{{M0all}}
+        {{진성M1}}{{M1all}}
+        {{진성N0}}{{N0all}}
+        {{진성O0}}{{O0all}}
+        {{진성P0}}{{P0all}}
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="새로고침" onclick="location.href='.'">
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="홈으로" onclick="location.href='/'">
+    </div>
+    <h3 align="center">&#60;진성&#62;</h3>
+    <table align="center" border="1" width="90%" height="50%" style="border-collapse: collapse; table-layout:fixed; font-size: 0.7em;">
+        <tr> <td style="border-right: hidden; border-bottom: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;" align="center">J0{{J0}}</td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"align="center">J1</td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-bottom: hidden;"></td>  </tr>
+        <tr> <td style="border-bottom: hidden;" align="center">I1{{I1}}</td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden; border-bottom: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;border-bottom: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;border-bottom: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;" align="center">K0{{K0}}</td>  </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">G1{{G1}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">G0{{G0}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;" align="center">A0{{A0}}</td> <td style="border-bottom: hidden;" align="center">A1{{A1}}</td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;" align="center">B0{{B0}}</td> <td style="border-bottom: hidden;" align="center">B1{{B1}}</td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"align="center">C0{{C0}}</td> <td align="center" style="border-bottom: hidden;">C1{{C1}}</td> <td style="border-bottom: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">F1{{F1}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">F0{{F0}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden; color: white;">C0</td> <td style="border-bottom: hidden; color: white;" align="center">C1</td> <td style="border-bottom: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden; border-left: hidden;"></td> <td></td> </tr>
+        <tr> <td></td> <td style="border-bottom: hidden;"></td> <td></td> <td></td> <td style="border-bottom: hidden;"></td> <td></td> <td></td> <td style="border-bottom: hidden;"></td> <td></td> <td></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">E1</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">E0{{E0}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"align="center">L0{{L0}}</td> <td style="border-bottom: hidden;"align="center">L1{{L1}}</td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;" align="center">M0{{M0}}</td> <td style="border-bottom: hidden;" align="center">M1{{M1}}</td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"align="center">선반</td> <td align="center" style="border-bottom: hidden;">선반</td> <td style="border-bottom: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden; border-left: hidden;"></td> <td style="border-bottom: hidden;" align="center">K1{{k1}}</td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;"align="center">D1{{D1}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td></td> <td></td> <td style="border-bottom: hidden;"></td> <td></td> <td></td> <td style="border-bottom: hidden;"></td> <td align="center">O0{{O0}}</td> <td></td> <td style="border-bottom: hidden;"></td> <td></td> <td style="border-left: hidden;" align="center">D0{{D0}}</td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;" align="center">I0{{I0}}</td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-bottom: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden; border-bottom: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-left: hidden;"></td> <td style="border-bottom: hidden;border-left: hidden;"></td> <td></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden; border-left: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-right: hidden;"align="center">N0{{N0}}</td> <td></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-top: hidden;"></td> <td style="border-right: hidden;" align="center">P0{{P0}}</td> <td></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-right: hidden; border-left: hidden; border-bottom: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-left: hidden; border-bottom: hidden;"></td> <td style="border-bottom: hidden;"align="center">H0{{H0}}</td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"align="center">H1{{H1}}</td> <td style="border-bottom: hidden;" align="center">H2{{H2}}</td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"align="center">H3{{H3}}</td> </tr>
+        <tr> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-bottom: hidden; border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-left: hidden; border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> <td style="border-bottom: hidden;"></td> </tr>
+        <tr> <td></td> <td style="border-right: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td style="border-right: hidden; border-top: hidden;"></td> <td></td> <td style="border-left: hidden;"></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+
+    </table>
+    
+</body>
+</html>

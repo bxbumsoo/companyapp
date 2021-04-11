@@ -1,0 +1,97 @@
+{%load static%}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body> 
+    <form align="center" action="." method="get" style="margin-bottom: 1%;">
+        {% csrf_token %}
+        물건 검색 : 
+        <input type="text" name="message">
+        <input type="submit" value="검색">
+    </form>
+    <div align="center">
+        {{many}}
+        {{검색어0}}{{oj0}}{{None0}}
+        {{검색어EZB1}}{{ojEZB1}}
+        {{검색어EZ1}}{{ojEZ1}}
+        {{검색어EZ2}}{{ojEZ2}}
+        {{검색어EZ3}}{{ojEZ3}}
+        {{검색어EZ4}}{{ojEZ4}}
+        {{검색어EZ5}}{{ojEZ5}}
+        <br>       
+        {{EZB1전체}}{{resultEZB1}}
+        {{EZ1전체}}{{resultEZ1}}
+        {{EZ2전체}}{{resultEZ2}}
+        {{EZ3전체}}{{resultEZ3}}
+        {{EZ4전체}}{{resultEZ4}}
+        {{EZ5전체}}{{resultEZ5}}
+    </div>
+    <div align="center" style="margin-top: 1%;">
+        전체 품목 보기 : 
+        <form action="." method="get" style="display: inline-block; margin-bottom:1%;" id="inf">
+            {% csrf_token %}
+            <select name="info" form="inf">
+                <option value="">선택하세요</option><option value="EZB1">지하1층</option>
+                <option value="EZ1">1층</option>
+                <option value="EZ2">2층</option>
+                <option value="EZ3">3층</option>
+                <option value="EZ4">4층</option>
+                <option value="EZ5">5층</option>
+                
+            </select>
+            <input type="submit" value="보기">
+        </form>
+    </div>
+    <div align="center">
+        {{1EZB1}}{{EZB1all}}
+        {{1EZ1}}{{EZ1all}}
+        {{1EZ2}}{{EZ2all}}
+        {{1EZ3}}{{EZ3all}}
+        {{1EZ4}}{{EZ4all}}
+        {{1EZ5}}{{EZ5all}}
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="새로고침" onclick="location.href='.'">
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="층별찾기" onclick="location.href='/searchoj/eznetoj/'">
+    </div>
+    <br>
+    <div align="center">
+        <input type="submit" value="홈으로" onclick="location.href='/'">
+    </div>
+    <h3 align="center">&#60;이지넷&#62;</h3>
+    <table align="center" border="1" width="30%" style="border-collapse: collapse;" >
+        <tr><td align="center">5층{{EZ5}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/EZ5/'"></td></tr>
+        <tr><td align="center">4층{{EZ4}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/EZ4/'"></td></tr>
+        <tr><td align="center">3층{{EZ3}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/EZ3/'"></td></tr>
+        <tr><td align="center">2층{{EZ2}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/EZ2/'"></td></tr>
+        <tr><td align="center">1층{{EZ1}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/EZ1/'"></td></tr>
+        <tr><td align="center">지하1층{{EZB1}}<br> <input style="float: right;" type="button" value="위치찾기" onclick="location.href='/searchoj/EZB1/'"> </td></tr>
+    </table>
+    <h3 align="center">&#60;이지넷 5층&#62;</h3>
+    <table align="center" border="1" width="30%" style="border-collapse: collapse;" >
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>    
+    </table>
+</body>
+</html>
